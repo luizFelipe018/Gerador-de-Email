@@ -31,22 +31,21 @@ int main() {
     cout << "Escolha o dominio"<<endl<<"[1]gmail.com"<<endl<<"[2]hotmail.com"<<endl<<"[3]yahoo.com"<<endl<<"[4]Outlook.com"<<endl;
     cout<<endl;
     cout<<"Digite o valor do dominio: ";
-
     cin >> escolhaDominio;
 
-    if (lista_de_valores.find(escolhaDominio) != lista_de_valores.end()) {
-        string dominio = lista_de_valores[escolhaDominio];
+        if (lista_de_valores.find(escolhaDominio) != lista_de_valores.end()) {
+            string dominio = lista_de_valores[escolhaDominio];
 
-        for (int i = 0; i < 6; i++) {
-            int numero = gerarNumeroAleatorio();
-            numerosGerados += to_string(numero);
-        }
+            for (int i = 0; i < 6; i++) {
+                int numero = gerarNumeroAleatorio();
+                numerosGerados += to_string(numero);
+            }
 
         cout << endl << "Email Gerado:" << endl << endl;
         cout << nome << sobrenome << numerosGerados << "@" << dominio << endl << endl;
-    } else {
-        cout << "Domínio inválido. Escolha um domínio válido." << endl;
-    }
+            }else{
+                cout << "Domínio inválido. Escolha um domínio válido." << endl;
+            }
 
     cout << "=======================================================================================";
 
